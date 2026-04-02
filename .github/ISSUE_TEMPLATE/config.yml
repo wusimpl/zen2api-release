@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: "📖 提交 Issue 前，请先阅读 README"
+    url: "https://github.com/wusimpl/zen2api-release#readme"
+    about: "请先阅读 README，了解下载、兼容性说明和基础排查方式。"

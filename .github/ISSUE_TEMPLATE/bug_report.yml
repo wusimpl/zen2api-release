@@ -1,0 +1,88 @@
+name: "🐛 Bug 报告"
+description: "反馈 zen2api 发布版使用中的问题"
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈！请尽量提供完整日志、截图、版本号和复现步骤。
+
+        > 提交前请先阅读 README：https://github.com/wusimpl/zen2api-release#readme
+
+  - type: input
+    id: version
+    attributes:
+      label: 软件版本
+      description: 请填写你正在使用的发布版本号
+      placeholder: "例如: v0.1.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: 操作系统
+      options:
+        - Windows
+        - macOS
+        - Linux
+    validations:
+      required: true
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: 出问题的组件
+      options:
+        - zen2api 主服务
+        - GUI
+        - anyrouter sidecar
+        - cursor2api sidecar
+        - grok2api sidecar
+        - 安装/升级流程
+        - 其他
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 确认事项
+      options:
+        - label: 我已经检查过是否有相同的 Issue
+          required: true
+        - label: 我已经阅读过 README
+          required: true
+        - label: 我已经附上日志或报错信息
+          required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 问题描述
+      description: 请清晰描述问题现象，可以直接贴截图
+      placeholder: "描述你遇到的问题..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      description: 请尽量提供稳定复现的步骤
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: 运行日志
+      description: 请粘贴相关日志、报错信息，或直接拖拽日志文件到此处
+      placeholder: "请粘贴日志，或直接拖拽日志文件到这里"
+    validations:
+      required: true
